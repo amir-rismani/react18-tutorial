@@ -1,0 +1,34 @@
+.course-lists{
+    gap: 1rem;
+}
+
+.course-item{
+    background: white;
+    padding: 1rem;
+    border-radius: .5rem;
+    gap: 2rem;
+}
+
+.course-item__image img{
+    border-radius: .5rem;
+}
+
+.course-item__body{
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.title{
+    font-size: x-large;
+    font-weight: bolder;
+    margin-bottom: .5rem;
+}
+
+.description{
+    color: gray;
+}
+
+.course-item__tags{
+    display: flex;
+    gap: .5rem;
+}

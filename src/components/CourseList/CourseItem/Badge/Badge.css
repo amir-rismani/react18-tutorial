@@ -1,0 +1,17 @@
+.badge {
+    background: beige;
+    padding: .2rem .5rem;
+    border-radius: .3rem;
+}
+
+.badge--completed {
+    background: rgba(0, 255, 0, .2);
+}
+
+.badge--active {
+    background: rgba(0, 255, 255, .2);
+}
+
+.badge--upcomming {
+    background: rgba(255, 255, 0, .2);
+}
