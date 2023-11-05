@@ -1,0 +1,37 @@
+.create-note{
+    width: 30%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+input{
+    border: none;
+    font-size: large;
+    padding: .5rem .3rem;
+    outline: none;
+    border-radius: .5rem;
+}
+
+::placeholder{
+    color: #aaa;
+}
+
+button{
+    background: black;
+    outline: none;
+    border: none;
+    font-size: large;
+    color: white;
+    padding: .5rem .3rem;
+    border-radius: .5rem;
+}
+
+select{
+    outline: none;
+        border: none;
+        font-size: medium;
+        padding: .5rem .3rem;
+        border-radius: .5rem;
+}
