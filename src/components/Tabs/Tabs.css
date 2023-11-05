@@ -1,0 +1,22 @@
+
+.tabs__header{
+    display: flex;
+    gap:2rem;
+    border-bottom: 1px solid gainsboro;
+    
+}
+
+.tab{
+    padding: 1rem 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.active{
+    color: #008bfd;
+    border-bottom: 2px solid #008bfd;
+}
+
+.tabs__content{
+    padding: 1rem;
+}
