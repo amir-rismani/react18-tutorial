@@ -8,7 +8,7 @@ const Note = ({ note, onRemove, onComplete }) => {
         day: 'numeric'
     })
     return (
-        <div className="note">
+        <div className={`note ${note.completed ? 'completed' : ''}`}>
             <div className="note__content">
                 <div className="meta">
                     <h3>{note.title}</h3>
