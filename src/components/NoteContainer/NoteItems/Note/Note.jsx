@@ -1,7 +1,7 @@
 import "./Note.css"
 import { TfiTrash } from "react-icons/tfi";
 
-const Note = ({ note }) => {
+const Note = ({ note, removeNote }) => {
     const date = new Date(note.createdAt).toLocaleDateString('en-US', {
         year: "numeric",
         month: 'short',
@@ -15,7 +15,7 @@ const Note = ({ note }) => {
                     <span className="description">{note.description}</span>
                 </div>
                 <div className="action">
-                    <TfiTrash style={{ color: 'red' }} />
+                    <TfiTrash style={{ color: 'red' }} onClick={() => removeNote(note.id)} />
                     <input type="checkbox" name="" id="" />
                 </div>
             </div>

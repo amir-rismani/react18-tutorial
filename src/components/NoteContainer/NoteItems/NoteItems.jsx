@@ -1,7 +1,7 @@
 import Note from "./Note/Note";
 import "./NoteItems.css"
 
-const NoteItems = ({ notes }) => {
+const NoteItems = ({ notes, onRemoveNote }) => {
     return (
         <div className="note-items">
             <div className="states">
@@ -10,7 +10,7 @@ const NoteItems = ({ notes }) => {
                 <div className="state-item">Open <span className="badge">1</span></div>
             </div>
             <div className="notes">
-                {notes.map(note => <Note key={note.id} note={note} />)}
+                {notes.map(note => <Note key={note.id} note={note} removeNote={onRemoveNote} />)}
             </div>
         </div>
     );
