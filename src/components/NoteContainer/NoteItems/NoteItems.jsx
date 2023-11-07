@@ -1,16 +1,13 @@
 import Note from "./Note/Note";
+import States from "./States/States";
 import "./NoteItems.css"
 
 const NoteItems = ({ notes, onRemove, onComplete }) => {
     return (
         <div className="note-items">
-            <div className="states">
-                <div className="state-item">All <span className="badge">2</span></div>
-                <div className="state-item">Completed <span className="badge">1</span></div>
-                <div className="state-item">Open <span className="badge">1</span></div>
-            </div>
+            <States notes={notes} />
             <div className="notes">
-                {notes.map(note => <Note key={note.id} note={note} onRemove={onRemove} onComplete={onComplete}/>)}
+                {notes.map(note => <Note key={note.id} note={note} onRemove={onRemove} onComplete={onComplete} />)}
             </div>
         </div>
     );
