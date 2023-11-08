@@ -9,13 +9,23 @@ const accordion = [
     { id: 4, title: 'Accordion title 4', description: 'Accordion description 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget.', },
 ];
 const AccordionDepends = () => {
-    const [expandedItem, setExpandedItem] = useState(0)
+    const [expandedItem, setExpandedItem] = useState(null)
 
     return (
         <div className='accordion'>
             {
-                accordion.map(item => <AccordionItem item={item} key={item.id} expandedItem={expandedItem} setExpandedItem={setExpandedItem} />)
+                accordion.map(item => <AccordionItem id={item.id} title={item.title} key={item.id} expandedItem={expandedItem} setExpandedItem={setExpandedItem} >{item.description}</AccordionItem>)
             }
+
+            <AccordionItem id={5} title="Accordion title #5" key={5} expandedItem={expandedItem} setExpandedItem={setExpandedItem} >
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi perferendis reprehenderit rem voluptas possimus asperiores omnis, cum eius, voluptatum explicabo, molestiae repellendus quasi repudiandae temporibus iusto. Sit natus facilis sint!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, suscipit:</p>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam architecto dolores doloribus ullam, fugiat fuga!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptatem repellat laudantium eligendi reiciendis consequatur molestias, facilis laboriosam aliquid deleniti quisquam ea? Dolor, facilis eaque.</li>
+                </ul>
+            </AccordionItem>
         </div >
     );
 }
