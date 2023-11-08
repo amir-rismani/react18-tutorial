@@ -1,3 +1,4 @@
+import Message from "../../../Message/Message"
 import "./States.css"
 const NoteItems = ({ notes }) => {
     // Derived state
@@ -5,7 +6,7 @@ const NoteItems = ({ notes }) => {
     const completedNotes = notes.filter(note => note.completed).length
     const openNotes = allNotes - completedNotes
 
-    if (!allNotes) return <h2>No notes has already been added.</h2>
+    if (!allNotes) return <Message>❌ No notes has already been added.</Message>
     return (
         <div className="states">
             <div className="state-item">All <span className="badge">{allNotes}</span></div>
