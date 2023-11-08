@@ -9,6 +9,8 @@ import NoteContainer from './components/NoteContainer/NoteContainer'
 function App() {
   // const [count, setCount] = useState(0)
   const [notes, setNotes] = useState([])
+  const [sortBy, setSortBy] = useState("latest")
+
   const handleAddNewNote = (note) => {
     setNotes((prevNotes) => [...prevNotes, note])
   }
@@ -35,9 +37,22 @@ function App() {
     setNotes(prevNotes => prevNotes.map(note => note.id === noteId ? { ...note, completed: !note.completed } : note))
   }
 
+  const handleSortBy = (e) => {
+    setSortBy(e.target.value)
+    sortNotes(e.target.value)
+  }
+
+  const sortNotes = (sortKey) => {
+    let sortedNotes = notes;
+    if (sortKey === 'latest') sortedNotes = [...notes].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // a > b ? -1 : 1 
+    if (sortKey === 'earliest') sortedNotes = [...notes].sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))
+    if (sortKey === 'completed') sortedNotes = [...notes].sort((a, b) => Number(a.completed) - Number(b.completed))
+    setNotes(sortedNotes)
+  }
+
   return (
     <>
-      <Header notes={notes} />
+      <Header notes={notes} sortBy={sortBy} onSortBy={handleSortBy} />
       <NoteContainer notes={notes} handleAddNewNote={handleAddNewNote} handleRemoveNote={handleRemoveNote} handleCompleteNote={handleCompleteNote} />
       {/* <CourseList /> */}
       {/* <Tabs /> */}
