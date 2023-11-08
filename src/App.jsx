@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 import './App.css'
 // import Tabs from './components/Tabs/Tabs'
@@ -6,6 +6,7 @@ import './App.css'
 // import Header from './components/Header/Header'
 // import NoteContainer from './components/NoteContainer/NoteContainer'
 import Accordion from './components/Accordion/Accordion'
+import AccordionDepends from './components/AccordionDepends/AccordionDepends'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -57,7 +58,8 @@ function App() {
       <NoteContainer notes={notes} handleAddNewNote={handleAddNewNote} handleRemoveNote={handleRemoveNote} handleCompleteNote={handleCompleteNote} /> */}
       {/* <CourseList /> */}
       {/* <Tabs /> */}
-      <Accordion collapsable />
+      <Accordion />
+      <AccordionDepends />
     </>
   )
 }
