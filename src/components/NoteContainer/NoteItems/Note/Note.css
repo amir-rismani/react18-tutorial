@@ -40,3 +40,11 @@
     color: gainsboro;
     font-size: small;
 }
+
+.icon{
+    width: 20px;
+}
+
+.red{
+    color: red;
+}

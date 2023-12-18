@@ -1,43 +1,71 @@
-// import { useState } from 'react'
+import { useReducer, useState } from 'react'
 // import reactLogo from './assets/react.svg'
 import './App.css'
 // import Tabs from './components/Tabs/Tabs'
 // import CourseList from './components/CourseList/CourseList'
 // import Header from './components/Header/Header'
-// import NoteContainer from './components/NoteContainer/NoteContainer'
-import Accordion from './components/Accordion/Accordion'
-import AccordionDepends from './components/AccordionDepends/AccordionDepends'
+import NoteContainer from './components/NoteContainer/NoteContainer'
+// import Accordion from './components/Accordion/Accordion'
+// import AccordionDepends from './components/AccordionDepends/AccordionDepends'
 
+function reducer(state, { type, payload }) {
+  switch (type) {
+    case 'add':
+      return [...state, payload.note]
+    case 'remove':
+      return state.filter(note => note.id !== payload.noteId)
+    case 'complete':
+      return state.map(note => note.id === payload.noteId ? { ...note, completed: !note.completed } : note)
+    default:
+      return state
+  }
+}
 function App() {
   // const [count, setCount] = useState(0)
-  // const [notes, setNotes] = useState([])
+  // const [notes, setNotes] =
+  useState([])
   // const [sortBy, setSortBy] = useState("latest")
 
-  // const handleAddNewNote = (note) => {
-  //   setNotes((prevNotes) => [...prevNotes, note])
-  // }
+  const [notes, dispatch] = useReducer(reducer, [])
+  const handleAddNewNote = (note) => {
+    // useState
+    // setNotes((prevNotes) => [...prevNotes, note])
 
-  // const handleRemoveNote = (noteId) => {
-  //   // const filterdNotes =  notes.filter(note => note.id !== noteId)
-  //   // setNotes(filterdNotes)
+    // useReducer
+    dispatch({ type: 'add', payload: { note } })
+  }
 
-  //   // or this logic (best)
-  //   setNotes(prevNotes => prevNotes.filter(note => note.id !== noteId))
-  // }
+  const handleRemoveNote = (noteId) => {
+    // const filterdNotes =  notes.filter(note => note.id !== noteId)
+    // setNotes(filterdNotes)
 
-  // const handleCompleteNote = (event) => {
-  //   const noteId = Number(event.target.value);
-  //   // const newNotes = [...notes];
-  //   // const index = newNotes.findIndex(note => note.id === noteId)
-  //   // newNotes[index].completed = !newNotes[index].completed
+    // or this logic (best)
+    // useState
+    // setNotes(prevNotes => prevNotes.filter(note => note.id !== noteId))
 
-  //   // or this logic
-  //   // const newNotes = notes.map(note => note.id === noteId ? { ...note, completed: !note.completed } : note)
-  //   // setNotes(newNotes);
+    // useReducer
+    dispatch({ type: 'remove', payload: { noteId } })
 
-  //   // best logic
-  //   setNotes(prevNotes => prevNotes.map(note => note.id === noteId ? { ...note, completed: !note.completed } : note))
-  // }
+  }
+
+  const handleCompleteNote = (event) => {
+    const noteId = Number(event.target.value);
+    // const newNotes = [...notes];
+    // const index = newNotes.findIndex(note => note.id === noteId)
+    // newNotes[index].completed = !newNotes[index].completed
+
+    // or this logic
+    // const newNotes = notes.map(note => note.id === noteId ? { ...note, completed: !note.completed } : note)
+    // setNotes(newNotes);
+
+    // best logic
+    // useState
+    // setNotes(prevNotes => prevNotes.map(note => note.id === noteId ? { ...note, completed: !note.completed } : note))
+
+    // useReducer
+    dispatch({ type: 'complete', payload: { noteId } })
+
+  }
 
   // const handleSortBy = (e) => {
   //   setSortBy(e.target.value)
@@ -54,12 +82,12 @@ function App() {
 
   return (
     <>
-      {/* <Header notes={notes} sortBy={sortBy} onSortBy={handleSortBy} />
-      <NoteContainer notes={notes} handleAddNewNote={handleAddNewNote} handleRemoveNote={handleRemoveNote} handleCompleteNote={handleCompleteNote} /> */}
+      {/* <Header notes={notes} sortBy={sortBy} onSortBy={handleSortBy} /> */}
       {/* <CourseList /> */}
       {/* <Tabs /> */}
-      <Accordion />
-      <AccordionDepends />
+      {/* <Accordion /> */}
+      {/* <AccordionDepends /> */}
+      <NoteContainer notes={notes} handleAddNewNote={handleAddNewNote} handleRemoveNote={handleRemoveNote} handleCompleteNote={handleCompleteNote} />
     </>
   )
 }
