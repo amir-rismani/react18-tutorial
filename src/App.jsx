@@ -17,7 +17,7 @@ function reducer(state, { type, payload }) {
     case 'complete':
       return state.map(note => note.id === payload.noteId ? { ...note, completed: !note.completed } : note)
     default:
-      return state
+      throw new Error("Unknown action: " + type)
   }
 }
 function App() {
