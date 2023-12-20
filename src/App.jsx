@@ -3,6 +3,7 @@ import DynamicComponent from './components/DynamicComponent'
 import './App.css'
 
 const components = [
+  { id: 'greeting', title: 'Greeting (Multi useContext)' },
   { id: 'theme', title: 'Theme Mode (useContext)' },
   { id: 'notes', title: 'Note List (useReducer)' },
   { id: 'courses', title: 'Course List' },
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <>
-      <strong>select a component:</strong>
+      <strong>Select a project:</strong>
       <select value={selectedComponent.id} onChange={handleChangeComponent}>
         {components.map(component => <option value={component.id} key={component.id}>{component.title}</option>)}
       </select>

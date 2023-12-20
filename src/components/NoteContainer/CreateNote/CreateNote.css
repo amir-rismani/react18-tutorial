@@ -1,12 +1,12 @@
 .create-note{
     width: 30%;
 }
-form{
+.form{
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-input{
+.input{
     border: none;
     font-size: large;
     padding: .5rem .3rem;

@@ -29,9 +29,9 @@ const CreateNote = ({ onAddNewNote }) => {
     return (
         <div className="create-note">
             <h3>Add New Note</h3>
-            <form onSubmit={handleSubmit}>
-                <input type="text" name="title" placeholder="Note Title" value={note.title} onChange={handleFields} />
-                <input type="text" name="description" placeholder="Note Description" value={note.description} onChange={handleFields} />
+            <form className="form" onSubmit={handleSubmit}>
+                <input className="input" type="text" name="title" placeholder="Note Title" value={note.title} onChange={handleFields} />
+                <input className="input" type="text" name="description" placeholder="Note Description" value={note.description} onChange={handleFields} />
                 <button type="submit" className="button">Add New Note</button>
             </form>
         </div>
