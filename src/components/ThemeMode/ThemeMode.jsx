@@ -1,4 +1,4 @@
-import ThemeProvider, { useTheme } from "./Context/ThemeContext";
+import ThemeProvider from "./Context/ThemeContext";
 import Panel from "./Panel/Panel";
 import SwitchMode from "./SwitchMode/SwitchMode";
 
