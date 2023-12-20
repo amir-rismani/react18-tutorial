@@ -1,5 +1,5 @@
+import { useTheme } from "../../ThemeMode/Context/ThemeContext";
 import "./Panel.css"
-import { useTheme } from "../Context/ThemeContext";
 
 const Panel = ({ title, children }) => {
     const { theme } = useTheme();
