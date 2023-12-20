@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import Panel from "./Panel/Panel";
+// 1. create context
+export const ThemeContext = createContext();
 
 const ThemeMode = () => {
     const [theme, setTheme] = useState('light');
@@ -7,13 +9,16 @@ const ThemeMode = () => {
         e.target.checked ? setTheme("dark") : setTheme('light')
     }
     return (
-        <div className="theme-mode text-center">
-            <Panel mode={theme} />
-            <label>
-                <input type="checkbox" name="" id="theme" onChange={handleChange} />
-                Use dark mode
-            </label>
-        </div>
+        // 2. provide context
+        <ThemeContext.Provider value={theme}>
+            <div className="theme-mode text-center">
+                <Panel />
+                <label>
+                    <input type="checkbox" name="" id="theme" onChange={handleChange} />
+                    Use dark mode
+                </label>
+            </div>
+        </ThemeContext.Provider>
     );
 }
 
