@@ -10,11 +10,11 @@ const ThemeMode = () => {
     }
     return (
         // 2. provide context
-        <ThemeContext.Provider value={theme}>
+        <ThemeContext.Provider value={{ theme, setTheme }}>
             <div className="theme-mode text-center">
                 <Panel />
                 <label>
-                    <input type="checkbox" name="" id="theme" onChange={handleChange} />
+                    <input type="checkbox" checked={theme === 'dark'} id="theme" onChange={handleChange} />
                     Use dark mode
                 </label>
             </div>

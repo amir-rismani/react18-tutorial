@@ -4,7 +4,7 @@ import { ThemeContext } from "../ThemeMode";
 
 const Button = ({ children }) => {
     // 3. consume context
-    const mode = useContext(ThemeContext)
+    const { theme: mode } = useContext(ThemeContext)
     const className = `btn--${mode}`;
     return <button className={`btn ${className}`}>{children}</button>;
 }
