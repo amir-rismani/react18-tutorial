@@ -1,11 +1,9 @@
-import { useContext } from "react";
 import "./Button.css"
-import { ThemeContext } from "../ThemeMode";
+import { useTheme } from "../Context/ThemeContext";
 
 const Button = ({ children }) => {
-    // 3. consume context
-    const { theme: mode } = useContext(ThemeContext)
-    const className = `btn--${mode}`;
+    const { theme } = useTheme();
+    const className = `btn--${theme}`;
     return <button className={`btn ${className}`}>{children}</button>;
 }
 

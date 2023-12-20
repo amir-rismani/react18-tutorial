@@ -1,12 +1,10 @@
 import "./Panel.css"
 import Button from "../button/button";
-import { useContext } from "react";
-import { ThemeContext } from "../ThemeMode";
+import { useTheme } from "../Context/ThemeContext";
 
 const Panel = () => {
-    // 3. consume context
-    const { theme: mode, setTheme } = useContext(ThemeContext)
-    const className = `panel--${mode}`
+    const { theme, setTheme } = useTheme();
+    const className = `panel--${theme}`
     return (
         <div className={`panel ${className}`}>
             <h1>Welcome</h1>
