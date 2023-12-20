@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <strong>Select a project:</strong>
+      <strong>Select a project/component:</strong>
       <select value={selectedComponent.id} onChange={handleChangeComponent}>
         {components.map(component => <option value={component.id} key={component.id}>{component.title}</option>)}
       </select>
