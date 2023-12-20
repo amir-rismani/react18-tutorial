@@ -1,0 +1,14 @@
+.btn{
+    outline: none;
+    margin: auto .2rem;
+    border: 1px solid gray;
+    background-color: transparent;
+}
+
+.btn--light{
+    color: black;
+}
+
+.btn--dark {
+    color: white;
+}

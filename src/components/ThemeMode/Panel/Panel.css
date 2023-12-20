@@ -1,0 +1,21 @@
+.panel{
+    border:2px solid black;
+    padding: 2rem;
+    border-radius: .5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.panel--light{
+    border-color: black;
+    background: white;
+    color: black;
+}
+
+.panel--dark{
+    border-color: white;
+    background: black;
+    color: white;
+}
+
+.panel h1{margin-top: 0;}

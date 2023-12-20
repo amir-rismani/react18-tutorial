@@ -1,8 +1,9 @@
-import Tabs from './Tabs/Tabs'
-import CourseList from './CourseList/CourseList'
-import NoteContainer from './NoteContainer/NoteContainer'
-import Accordion from './Accordion/Accordion'
-import AccordionDepends from './AccordionDepends/AccordionDepends'
+import Tabs from './Tabs/Tabs';
+import CourseList from './CourseList/CourseList';
+import NoteContainer from './NoteContainer/NoteContainer';
+import Accordion from './Accordion/Accordion';
+import AccordionDepends from './AccordionDepends/AccordionDepends';
+import ThemeMode from './ThemeMode/ThemeMode';
 
 const components = {
     tabs: Tabs,
@@ -10,6 +11,7 @@ const components = {
     notes: NoteContainer,
     accordion: Accordion,
     accordion2: AccordionDepends,
+    theme: ThemeMode,
 }
 const DynamicComponent = (props) => {
     const SelectedComponent = components[props.component.id]

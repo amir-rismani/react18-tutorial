@@ -32,7 +32,7 @@ const CreateNote = ({ onAddNewNote }) => {
             <form onSubmit={handleSubmit}>
                 <input type="text" name="title" placeholder="Note Title" value={note.title} onChange={handleFields} />
                 <input type="text" name="description" placeholder="Note Description" value={note.description} onChange={handleFields} />
-                <button type="submit">Add New Note</button>
+                <button type="submit" className="button">Add New Note</button>
             </form>
         </div>
     );
