@@ -1,0 +1,50 @@
+
+.note{
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    border-radius: .5rem;
+    width: 100%;
+    padding: 0 .5rem 1rem;
+}
+
+.note.completed{
+    background: hsl(153, 100%, 96%);
+}
+.note.completed h3{
+    text-decoration: line-through;
+}
+
+.note__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.action{
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.description{
+    color:#aaa
+}
+.note__footer{
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+    padding-top: .5rem;
+    color: gainsboro;
+    font-size: small;
+}
+
+.icon{
+    width: 20px;
+}
+
+.red{
+    color: red;
+}

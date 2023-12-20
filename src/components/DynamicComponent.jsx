@@ -5,6 +5,7 @@ import Accordion from './Accordion/Accordion';
 import AccordionDepends from './AccordionDepends/AccordionDepends';
 import ThemeMode from './ThemeMode/ThemeMode';
 import MultiContext from './MultiContext/MultiContext';
+import NoteCR from './NoteCR/NoteCR';
 
 const components = {
     tabs: Tabs,
@@ -14,6 +15,7 @@ const components = {
     accordion2: AccordionDepends,
     theme: ThemeMode,
     greeting: MultiContext,
+    notecr: NoteCR,
 }
 const DynamicComponent = (props) => {
     const SelectedComponent = components[props.component.id]
