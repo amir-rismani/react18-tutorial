@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.badge{
+.state-item__badge{
     background: cadetblue;
     color: #fff;
     display: flex;

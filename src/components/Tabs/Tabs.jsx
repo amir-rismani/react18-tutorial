@@ -8,7 +8,7 @@ const tabsData = [
 ];
 
 const Tabs = () => {
-    const [activeTab, setActiveTab] = useState(2)
+    const [activeTab, setActiveTab] = useState(1)
     return (
         <div className="tabs">
             <div className="tabs__header">

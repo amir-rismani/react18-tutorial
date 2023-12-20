@@ -9,9 +9,9 @@ const NoteItems = ({ notes }) => {
     if (!allNotes) return <Message>❌ No notes has already been added.</Message>
     return (
         <div className="states">
-            <div className="state-item">All <span className="badge">{allNotes}</span></div>
-            <div className="state-item">Completed <span className="badge">{completedNotes}</span></div>
-            <div className="state-item">Open <span className="badge">{openNotes}</span></div>
+            <div className="state-item">All <span className="state-item__badge">{allNotes}</span></div>
+            <div className="state-item">Completed <span className="state-item__badge">{completedNotes}</span></div>
+            <div className="state-item">Open <span className="state-item__badge">{openNotes}</span></div>
         </div>
     );
 }

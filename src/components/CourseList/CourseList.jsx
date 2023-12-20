@@ -9,9 +9,7 @@ const courses = [
 const CourseList = () => {
     return (
         <div className="course-lists d-flex flex-column">
-            {
-                courses.map(course => <CourseItem course={course} key={course.id} />)
-            }
+            {courses.map(course => <CourseItem course={course} key={course.id} />)}
         </div>
     );
 }
