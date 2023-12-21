@@ -1,0 +1,17 @@
+.navbar{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 1rem 0;
+    border-bottom: 1px solid gray;
+}
+
+.nav-item{
+    margin: auto .5rem;
+
+}
+
+a{
+    text-decoration: none;
+}
+

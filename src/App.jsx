@@ -11,10 +11,11 @@ const components = [
   { id: 'accordion2', title: 'Interdependent Accordion' },
   { id: 'tabs', title: 'Tabs' },
   { id: 'notecr', title: 'Note List using combine useContext and useReducer' },
+  { id: 'router', title: 'React Router Dom' },
 ]
 function App() {
 
-  const [selectedComponent, setSelectedComponent] = useState(components[2])
+  const [selectedComponent, setSelectedComponent] = useState(components.at(-1))
 
   const handleChangeComponent = (e) => {
     setSelectedComponent(components.find(component => component.id === e.target.value))

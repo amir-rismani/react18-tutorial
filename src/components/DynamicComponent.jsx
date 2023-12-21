@@ -6,6 +6,7 @@ import AccordionDepends from './AccordionDepends/AccordionDepends';
 import ThemeMode from './ThemeMode/ThemeMode';
 import MultiContext from './MultiContext/MultiContext';
 import NoteCR from './NoteCR/NoteCR';
+import ReactRouter from './ReactRouter/ReactRouter';
 
 const components = {
     tabs: Tabs,
@@ -16,6 +17,7 @@ const components = {
     theme: ThemeMode,
     greeting: MultiContext,
     notecr: NoteCR,
+    router:ReactRouter
 }
 const DynamicComponent = (props) => {
     const SelectedComponent = components[props.component.id]
