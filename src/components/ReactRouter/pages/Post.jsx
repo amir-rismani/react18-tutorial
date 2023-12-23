@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useSearchParams } from "react-router-dom"
 const posts = [
     { id: 1, title: "Javascript Course", body: "JavaScript (JS) is a lightweight interpreted (or just-in-time compiled) programming language with first-class functions." },
     { id: 2, title: "React.js Course", body: "React is the library for web and native user interfaces. Build user interfaces out of individual pieces called components written in JavaScript." },
@@ -6,9 +6,10 @@ const posts = [
 ];
 function Posts() {
     const params = useParams();
-    console.log(params)
+    const [searchParams, setSearchParams] = useSearchParams();
     const post = posts.find(post => post.id === Number(params.id));
-    console.log(post)
+
+    console.log(searchParams.get("type"));
     return (
         <div>
             <h1>Post Page</h1>
