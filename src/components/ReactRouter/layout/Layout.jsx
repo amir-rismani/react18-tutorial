@@ -6,7 +6,7 @@ function Layout() {
         <div>
             <NavBar />
             <Outlet />
-            <footer>Footer</footer>
+            <footer style={{ marginTop: '2rem' }}>Footer</footer>
         </div>
     )
 }
