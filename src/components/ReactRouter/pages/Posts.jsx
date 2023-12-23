@@ -6,6 +6,7 @@ function Posts() {
             <h1>Posts Page</h1>
             <ul>
                 <li>
+                    {/* declarative navigate */}
                     <Link to="1?type=free&cat=frontend">Post 1</Link>
                 </li>
                 <li>
