@@ -4,7 +4,7 @@ import { buyCake } from "../redux/cake/cakeActions";
 
 function CakeContainer() {
     const [cakesNumber, setCakesNumber] = useState(0)
-    const state = useSelector(state => state)
+    const state = useSelector(state => state.cake)
     const dispatch = useDispatch();
     return (
         <div>
