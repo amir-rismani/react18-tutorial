@@ -12,6 +12,7 @@ const components = [
   { id: 'tabs', title: 'Tabs' },
   { id: 'notecr', title: 'Note List using combine useContext and useReducer' },
   { id: 'router', title: 'React Router Dom' },
+  { id: 'redux', title: 'React Redux' },
 ]
 function App() {
 

@@ -7,6 +7,7 @@ import ThemeMode from './ThemeMode/ThemeMode';
 import MultiContext from './MultiContext/MultiContext';
 import NoteCR from './NoteCR/NoteCR';
 import ReactRouter from './ReactRouter/ReactRouter';
+import ReactRedux from './Redux/ReactRedux';
 
 const components = {
     tabs: Tabs,
@@ -17,7 +18,8 @@ const components = {
     theme: ThemeMode,
     greeting: MultiContext,
     notecr: NoteCR,
-    router:ReactRouter
+    router: ReactRouter,
+    redux: ReactRedux
 }
 const DynamicComponent = (props) => {
     const SelectedComponent = components[props.component.id]
