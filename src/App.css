@@ -1,3 +1,7 @@
 select{
     margin:.5rem 0 2rem;
 }
+
+.muted{
+    color: rgb(177, 177, 177);
+}
